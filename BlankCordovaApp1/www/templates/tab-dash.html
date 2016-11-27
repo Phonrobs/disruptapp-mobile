@@ -1,0 +1,24 @@
+﻿<ion-view view-title="แจ้งปัญหา">
+  <ion-content>
+    <ion-list>
+        <ion-item class="item-image">
+            <img id="photo" src="img/photo.jpg" ng-click="takePhoto()" />
+        </ion-item>
+        <label class="item item-input item-select">
+            <div class="input-label">
+                เลือกประเภทปัญหา
+            </div>
+            <select ng-model="data.problem">
+                <option>ขยะ</option>
+                <option>ถนน</option>
+                <option>น้ำ</option>
+                <option>อาหาร</option>
+            </select>
+        </label>
+        <label class="item item-input">
+            <input ng-model="data.detail" type="text" placeholder="กรอกรายละเอียดปัญหา">
+        </label>
+        <button ng-click="save()" class="button button-full button-positive">บันทึก</button>   
+    </ion-list>
+  </ion-content>
+</ion-view>
